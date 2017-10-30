@@ -11,14 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024170223) do
+ActiveRecord::Schema.define(version: 20171029022718) do
 
-  create_table "Olders", force: :cascade do |t|
+  create_table "olders", force: :cascade do |t|
     t.string   "company"
     t.text     "item"
     t.text     "description"
+    t.string   "location"
+    t.string   "machien"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
