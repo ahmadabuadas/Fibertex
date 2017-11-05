@@ -8,15 +8,12 @@
 </head>
 <body>
 <%= render 'layouts/nav' %>
+<%= render 'layouts/messages' %>
 
-<% flash.each do |name, msg| %>
-  <ul>
-    <li><%= msg %></li>
-  </ul>
-<% end %>
+
 
 <%= yield %>
 
-<%= render 'layouts/fotter' %>
+<%#= render 'layouts/fotter' %>
 </body>
 </html>

@@ -23,5 +23,6 @@ Machien: <%= @older.machien %>
 
 <p>
 <%= image_tag @older.image.url(:large) %>
-
 </p>
+<%= link_to "Edit this Order", edit_older_path(@older) %> |
+<%= link_to "Back to Orders listing", olders_path %>

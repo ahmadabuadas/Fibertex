@@ -1,4 +1,9 @@
 class OldersController < ApplicationController
+before_action :set_older, only: [:edit, :update, :show, :destroy]
+
+def index
+  @olders = Older.all
+end
 
 def new
 @older = Older.new
@@ -33,7 +38,18 @@ def show
     @older = Older.find(params[:id])
 end
 
+def destroy
+@older = Older.find(params[:id])
+@older.destroy
+flash[:notice] = "The order was successfully deleted"
+redirect_to olders_path
+end
+
 private
+def set_older
+    @older = Older.find(params[:id])
+end
+
 def older_params
 params.require(:older).permit(:company, :item,
                :description, :machien, :location, :image)

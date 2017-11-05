@@ -5,7 +5,7 @@ class Olders < ActiveRecord::Migration
     t.text :item
     t.text :description
     t.string :location
-    t.string :machiens
+    t.string :machien
     t.timestamps 
    
   end
