@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20171029022718) do
 
-  create_table "olders", force: :cascade do |t|
+  create_table "Olders", force: :cascade do |t|
     t.string   "company"
     t.text     "item"
     t.text     "description"
