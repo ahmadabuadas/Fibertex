@@ -52,6 +52,9 @@ GEM
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
     climate_control (0.2.0)
@@ -108,7 +111,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pg (0.21.0)
+    pg (0.20.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -197,12 +200,13 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk (~> 2.3)
   bootstrap
+  bootstrap-sass (~> 3.3.5)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip
-  pg
+  paperclip (~> 5.0.0)
+  pg (= 0.20.0)
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)

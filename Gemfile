@@ -6,7 +6,7 @@ gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap'
 gem 'twitter-bootstrap-rails'
-
+gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'jquery-rails'
 # Use SCSS for stylesheets
@@ -29,10 +29,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-
-gem 'paperclip'
+gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '~> 2.3'
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -54,6 +54,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.20.0'
   gem 'rails_12factor'
 end
