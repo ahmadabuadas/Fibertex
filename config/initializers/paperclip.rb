@@ -1,0 +1,2 @@
+Paperclip::Attachment.default_options[:url] = 'https://s3.console.aws.amazon.com/s3/buckets/fibertex'
+Paperclip::Attachment.default_options[:path] = 'https://s3.console.aws.amazon.com/s3/buckets/fibertex/?region=us-east-2&tab=overview'
