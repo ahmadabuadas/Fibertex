@@ -1,28 +1,23 @@
-<h1>Showing selected Item</h1>
 
-<p>
-Company: <%= @older.company %>
-</p>
- 
-<p>
-Item: <%= @older.item %>
-</p>
+<div class="well col-xs-8 col-xs-offset-2">
+    <h3 align="center"><strong><%= @older.company %></strong></h3>
+    <hr>
+    <h3 align="center"><strong><%= @older.item %></strong></h3>
+    <hr>
+    <h3 align="center"><strong><%= @older.description %></strong></h3>
+    <hr>
+    <h3 align="center"><strong><%= @older.location %></strong></h3>
+    <hr>
+    <h3 align="center"><strong><%= @older.machien %></strong></h3>
+    <hr>
+    <h3 align="center"><strong><%= image_tag @older.image.url(:large) %></strong></h3>
+    <hr>
+    <div class="article-actions" , align="center">
+    <%= link_to "Edit this Order", edit_older_path(@older), class: "btn btn-lg btn-primary" %>
+    <%= link_to "Delete this Order", older_path(@older), method: :delete,
+    data: { confirm: "Are you sure you want to delete the article?"},
+    class: "btn btn-lg btn-danger" %>
+    <%= link_to "View all Orders", olders_path, class: "btn btn-lg btn-success" %>
+    </div>
+</div>
 
-<p>
-Description: <%= @older.description %>
-</p>
-
-
-<p>
-Location: <%= @older.location %>
-</p>
-
-<p>
-Machien: <%= @older.machien %>
-</p>
-
-<p>
-<%= image_tag @older.image.url(:large) %>
-</p>
-<%= link_to "Edit this Order", edit_older_path(@older) %> |
-<%= link_to "Back to Orders listing", olders_path %>

@@ -1,49 +1,70 @@
-<% if @older.errors.any? %>
-    <h2>The following errors prevented the order from getting added</h2>
-    <ul>
-        <% @older.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+<%= render 'shared/errors', obj: @older %>
 
-<%= form_for @older, html: { multipart: true } do |f| %>
-    <p>
-   <h5> <%= f.label :company %></h5><br/>
-    <%= f.text_field :company %>
-    </p>
-    <p>
-    <%= f.label :item %><br/>
-    <%= f.text_field :item %>
-    </p>
-    <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-    </p>
-    
-    <p>
-    <%= f.label :location %><br/>
-    <%= f.select :location, ["Line1", 'Line2', 
-    'Electrical Room', 'Mechanical Room', 'Supply Room']%>
-    </p>
-    
-    <% #if params[:location] == ('Line1' || 'Line2') %>
-    <p>
-    <%= f.label :machien %><br/>
-    <%= f.select :machien, ['','hoppers', 'horiezantal', 'TCF',
-    'MTC', 'Card', 'Cross Lapper','Draffter',
-    'Looms', 'Gage', 'Calender', 'Accumalter', 'Winder',
-    'Packer' , 'Lintace', 'Fans', 'Spray system', 'Others']%>
-    </p>
-    <% #end %>
-    
-    <p>
-    <%= f.label :image %><br/>
-    <%= f.file_field :image %>
-    </p>
-    
-    <p>
-    <%= f.submit 'Add New Item'%>
-    </p>
-<% end %>
-<%= link_to "Back to Orders listing", olders_path %>
+<div class='row'>
+    <div class='col-lg-12'>
+      <%= form_for @older, html: {class: "form-horizontal", role: "form", multipart: true } do |f| %>
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :company %>
+            </div>
+            <div class="col-lg-8">
+            <%= f.text_field :company, class: "text_field",size: 40, placeholder: "Vender company", autofocus: true %>
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :item %>
+            </div>
+            <div class="col-lg-8">
+            <%= f.text_area :item, rows: 3, class: "form-control", placeholder: "Item name" %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :description %>
+            </div>
+            <div class="col-lg-8">
+            <%= f.text_area :description, rows: 6, class: "form-control", placeholder: "More details" %>
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :location %>
+            </div>
+            <div class="col-sm-8">
+            <%= f.select :location, ["Line1", 'Line2', 
+                'Electrical Room', 'Mechanical Room', 'Supply Room'] %>
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :machien %>
+            </div>
+            <div class="col-sm-8">
+            <%= f.select :machien,['','hoppers', 'horiezantal', 'TCF',
+                            'MTC', 'Card', 'Cross Lapper','Draffter',
+                            'Looms', 'Gage', 'Calender', 'Accumalter', 'Winder',
+                            'Packer' , 'Lintace', 'Fans', 'Spray system', 'Others'] %>
+            </div>
+        </div>
+        
+         <div class="form-group">
+            <div class="control-label col-sm-2">
+            <%= f.label :Image %>
+            </div>
+            <div class="col-lg-8">
+            <%= f.file_field :image, rows: 2, class: "form-control", size: 40, placeholder: "Body of article" %>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <%= f.submit  class: 'btn btn-primary btn-lg' %>
+            </div>
+        </div>
+        <% end %>
+        <div class="col-xm-4 col-xm-offset-4">
+         <h5 align="center">[<%= link_to "Back to Orders listing", olders_path %>]</h5>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,30 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 #fotter_nav {
   color:DodgerBlue
 }
+.article-actions {
+border-top: 1px solid #eaeaea;
+padding-top: 35px;
+}
+
+.row{
+  font-size: 1.6em !important;
+}
+
+textarea {
+   font-size: 1.1em !important;
+}
+
+.text_field {
+  font-size: 1.1em !important;
+}
+
+.table {
+font-size: 15px 
+}
+
+
 
 .example3 .navbar-brand {
   height: 80px;
@@ -12,13 +33,33 @@
 .example3 .nav >li >a {
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 1.4em !important;
+  font-weight: bold;
+  color: white !important;
+        
 }
 .example3 .navbar-toggle {
   padding: 10px;
   margin: 25px 15px 25px 0;
 }
- 
- 
+
+ example3  .dropdown{
+      font-size: 1.4em !important;
+       font-weight: bold;
+   }
+   
+ .container{
+   width: 100%;
+ }
+ .navbar-header{  float: left;}
+ .navbar-nav {
+    /* display: -webkit-box; */
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
+    float: right;
+}
+
  body {
  // margin: 0;
  // padding: 0;

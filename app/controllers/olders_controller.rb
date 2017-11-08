@@ -16,7 +16,7 @@ end
 def update
     @older = Older.find(params[:id])
     if @older.update(older_params)
-        flash[:notice] = "The older was successfully updated"
+        flash[:success] = "The older was successfully updated"
         redirect_to older_path(@older)
     else
         render 'edit'
@@ -27,7 +27,7 @@ def create
 #render plain: Params[:older].inspect 
 @older = Older.new(older_params)
     if @older.save
-        flash[:notice] = "The order was successfully added"
+        flash[:success] = "The order was successfully added"
         redirect_to older_path(@older)
     else
         render 'new'
@@ -41,7 +41,7 @@ end
 def destroy
 @older = Older.find(params[:id])
 @older.destroy
-flash[:notice] = "The order was successfully deleted"
+flash[:danger] = "The order was successfully deleted"
 redirect_to olders_path
 end
 

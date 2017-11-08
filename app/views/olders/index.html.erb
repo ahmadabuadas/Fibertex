@@ -1,32 +1,11 @@
-<h1>Listing all Orders</h1>
 
-<p>
- <%= link_to "Add new Order", new_older_path %>
-</p>
-<table>
-    <tr>
-        <th>Company</th>
-        <th>Item</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th>Machien</th>
-        <th>Image</th>
-    </tr>
-        <% @olders.each do |older| %>
-    <tr>
-        <td><%= older.company %></td>
-        <td><%= older.item %></td>
-        <td><%= older.description %></td>
-        <td><%= older.location %></td>
-        <td><%= older.machien %></td>
-        <td> <%= image_tag older.image.url(:thumb) %></td>
-        <td><%= link_to 'Edit', edit_older_path(older) %></td>
-        <td><%= link_to 'Show', older_path(older) %></td>
-        <td><%= link_to 'Delete', older_path(older),
-        method: :delete, data: {confirm: "Are you sure?"} %></td>
-        <td><button type="button" class="btn btn-primary btn-xs">Done</button></td>
-    </tr>
-    <% end %>
-</table>
+ <h1 align="center" >Listing All Orders </h1>
+ <h3 align="center" ><%= link_to "Add new Order", new_older_path %></h3>
+ <hr>
+ <%= render 'list' %>
+ 
+
+
+
 
 
