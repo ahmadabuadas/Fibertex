@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029022718) do
+ActiveRecord::Schema.define(version: 20171109132358) do
 
   create_table "Olders", force: :cascade do |t|
     t.string   "company"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20171029022718) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

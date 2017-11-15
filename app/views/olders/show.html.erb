@@ -12,6 +12,7 @@
     <hr>
     <h3 align="center"><strong><%= image_tag @older.image.url(:large) %></strong></h3>
     <hr>
+    
     <div class="article-actions" , align="center">
     <%= link_to "Edit this Order", edit_older_path(@older), class: "btn btn-lg btn-primary" %>
     <%= link_to "Delete this Order", older_path(@older), method: :delete,
@@ -19,5 +20,5 @@
     class: "btn btn-lg btn-danger" %>
     <%= link_to "View all Orders", olders_path, class: "btn btn-lg btn-success" %>
     </div>
-</div>
+</div
 

@@ -3,18 +3,34 @@
 #fotter_nav {
   color:DodgerBlue
 }
+
+.pagination {
+    font-size: 1.2em !important;
+   display: inline-flex;
+   margin: 0 auto;
+}
+ 
+.listing {
+list-style: none;
+padding-left: 0;
+}
+
 .article-actions {
 border-top: 1px solid #eaeaea;
 padding-top: 35px;
 }
 
-.row{
-  font-size: 1.6em !important;
+.row {
+  font-size: 1.5em !important;
+}
+.form-control{
+  font-size: 1.1em !important;
 }
 
 textarea {
    font-size: 1.1em !important;
 }
+
 
 .text_field {
   font-size: 1.1em !important;
@@ -23,8 +39,9 @@ textarea {
 .table {
 font-size: 15px 
 }
-
-
+.login{
+ font-size: 15px 
+}
 
 .example3 .navbar-brand {
   height: 80px;
@@ -47,6 +64,7 @@ font-size: 15px
       font-size: 1.4em !important;
        font-weight: bold;
    }
+   
    
  .container{
    width: 100%;
@@ -95,31 +113,43 @@ article {
   margin: 10px;
 }
 
-/*/h1 {
+/*h3 {
+  top: 60%;
+  width: 100%;
+  font-size: 35px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  padding-top: 300px;
+   display: inline-block;
+}
+
+h3 span {
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+} */
+
+h4 {
   position: absolute;
   top: 60%;
   width: 100%;
-  font-size: 36px;
+  font-size: 30px;
   letter-spacing: 3px;
-  color: #000;
+  color: #fff;
   font-family: Oswald, sans-serif;
   text-align: center;
+  padding-top: 140px;
+  padding-right: 35px;
 }
 
-//h1 span {
+h4 span {
   font-family: sans-serif;
   letter-spacing: 0;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
-
-//h1 span a {
-  color: #000;
-}
-//h2 {
-  color: #000;
-}
-//h5 {
-  color: #000;
-}*/
