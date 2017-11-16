@@ -58,7 +58,7 @@ params.require(:older).permit(:company, :item,
 end
 
 def require_same_user
-    if current_user != @older.user
+    if current_user !=@older.user and !current_user.admin?
         flash[:danger] = "You can only edit or delete your own Orders"
         redirect_to root_path
     end

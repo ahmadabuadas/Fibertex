@@ -50,7 +50,7 @@ font-size: 15px
 .example3 .nav >li >a {
   padding-top: 30px;
   padding-bottom: 30px;
-  font-size: 1.4em !important;
+  font-size: 1.6em !important;
   font-weight: bold;
   color: white !important;
         
@@ -60,11 +60,16 @@ font-size: 15px
   margin: 25px 15px 25px 0;
 }
 
- example3  .dropdown{
-      font-size: 1.4em !important;
+ example3 >ul >a .dropdown {
+      font-size: 1.9em !important;
        font-weight: bold;
    }
-   
+   .navbar-nav>li>.dropdown-menu {
+    font-size: 1.4em !important;
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
    
  .container{
    width: 100%;

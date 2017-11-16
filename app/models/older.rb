@@ -2,7 +2,7 @@ class Older < ActiveRecord::Base
     belongs_to :user
     
     validates:company , presence:true, length:{minimum: 3, maximum: 20}
-    validates:item , presence:true, length:{minimum: 3, maximum: 20}
+    validates:item , presence:true, length:{minimum: 3, maximum: 50}
     validates:description , presence:true, length:{minimum: 3, maximum: 300}
     validates:location , presence:true
     validates:user_id , presence:true

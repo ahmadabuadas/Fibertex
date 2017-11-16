@@ -30,9 +30,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Line One </a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#">Hoppers</a></li>
-              <li><a href="#">Horizental machien</a></li>
-              <li><a href="#">TCF</a></li>
-               <li><a href="#">TMC</a></li>
+               <li><a href="#">TCF/TMC</a></li>
               <li><a href="#">Card</a></li>
               <li><a href="#">Cross Lapper</a></li>
               <li><a href="#">Drafter</a></li>
@@ -44,7 +42,6 @@
               <li><a href="#">Winder</a></li>
               <li><a href="#">Taker Roll</a></li>
               <li class="divider"></li>
-              <li><a href="#">Spray System</a></li>
               <li><a href="#">Other</a></li>
             </ul>
           </li>
@@ -52,9 +49,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Line Two </a>
             <ul class="dropdown-menu" role="menu">
                <li><a href="#">Hoppers</a></li>
-              <li><a href="#">Horizental machien</a></li>
-              <li><a href="#">TCF</a></li>
-               <li><a href="#">TMC</a></li>
+               <li><a href="#">TCF/TMC</a></li>
               <li><a href="#">Card</a></li>
               <li><a href="#">Cross Lapper</a></li>
               <li><a href="#">Drafter</a></li>
@@ -65,7 +60,6 @@
               <li><a href="#">Winder</a></li>
               <li><a href="#">Taker Roll</a></li>
               <li class="divider"></li>
-              <li><a href="#">Spray System</a></li>
               <li><a href="#">Other</a></li>
             </ul>
           </li>
@@ -77,15 +71,21 @@
               <li><a href="#">Electrical Room</a></li>
             </ul>
           </li>
+          <%# if logged_in? && current_user.admin? %>
+          <li><%#= link_to 'Users', users_path %></li>
+          <% #end %>
            <li><%= link_to 'Log out', logout_path, method: :delete, 
              data: { confirm: "Are you sure you want Log out ?"}, 
              class: "btn btn-xs btn-danger"   %>
            </li>
-           
+            <li align="center" ><h5><a href="#"><br>Welcome <br><%=current_user.username %>
+            <br>  <%= "Admin" if current_user.admin? %></h5></a></li>
+       
         <% else %>
               <li><%= link_to 'Log in', login_path , class: "btn btn-xs btn-primary"%></li>
               <li><%= link_to 'Sign up', signup_path, class: "btn btn-xs btn-info" %></li>
         <% end %>
+        
         </ul>
       </div>
       <!--/.nav-collapse -->
